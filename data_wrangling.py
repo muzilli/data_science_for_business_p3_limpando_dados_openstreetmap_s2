@@ -1072,6 +1072,7 @@ def main(filename):
 def print_items_sorted(items, key_value=0, reverse=False):
   print ("{")
   
+  #Loop the process tags
   for key, value in sorted(items.items(), key=lambda value: value[key_value], reverse=reverse):
     print ("'%s' : %d ," % (key, value))
   print ("}")
@@ -1079,6 +1080,7 @@ def print_items_sorted(items, key_value=0, reverse=False):
 
 pprint.pprint('Inicio do Processo ' + str(datetime.now()))
 # main(SAMPLE_FILE)
+# Start the process
 main(OSM_FILE)
 pprint.pprint('Fim Processo ' + str(datetime.now()))
 
